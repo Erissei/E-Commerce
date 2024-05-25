@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REGISTER NOW!</title>
+<style>
+  body {
+    background-color: darkviolet;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    background-color: #4b0082; /* Dark purple */
+    padding: 10px 0;
+    text-align: center;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  form {
+    margin-top: 50px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #663399; /* Dark orchid */
+  }
+  form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  form input[type="submit"] {
+    background-color: #4b0082; /* Dark purple */
+    color: white;
+    cursor: pointer;
+  }
+  #message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: lightgreen;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+  <h1>REGISTER NOW!</h1>
+  <p>Join our community and get 100% off on your first 5 purchases.</p>
+  <p>Can't live without it.</p>
+
+  
+  <form id="registration-form" action="register.php" method="post" onsubmit="showMessage(event)">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <input type="submit" value="Register">
+  </form>
+  <div id="message"></div>
+</div>
+
+<script>
+  function showMessage(event) {
+    event.preventDefault();
+    document.getElementById('message').innerText = "Your account has been registered";
+  }
+</script>
+
+</body>
+</html>
+
